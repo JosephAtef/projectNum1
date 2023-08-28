@@ -1,0 +1,471 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 /80%);
+}
+
+.body {
+    margin: 0 -12px;
+    margin-bottom: 0;
+}
+
+.phone-nav-1 {
+    display: none;
+}
+
+#menu-bar-1 {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+header .logo {
+    display: flex;
+    text-decoration: none;
+}
+
+header .logo h1 {
+    color: white;
+}
+
+header {
+    background-color: black;
+    position: relative;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav {
+    margin-left: 50px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+    padding: 40px 10px;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+
+/* end header */
+
+
+/* start landing */
+
+.landing {
+    /* min-height: 100vh; */
+    background-color: black;
+    background-size: cover;
+    position: relative;
+}
+
+.landing .main .text {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: translateY(-50px);
+    width: 50%;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing .main .text .contant {
+    max-width: 500px;
+}
+
+.landing .main .text .contant p {
+    color: goldenrod;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.landing .main .text .contant h2 {
+    color: goldenrod;
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.landing .main .text .contant .owner {
+    display: flex;
+}
+
+.landing .main .text .contant .owner .buy {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin-right: 20px;
+}
+
+.landing .main .text .contant .owner .more {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.landing .main .image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.landing .main .image img {
+    width: 50%;
+}
+
+
+/* end landing */
+
+.title {
+    padding: 20px;
+}
+
+.title h2 span {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+}
+
+
+/* start articles */
+
+.articles {
+    width: 100%;
+}
+
+.box-container {
+    margin-left: 10%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.box-container .box {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    border: 2px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+}
+
+.box-container .box img {
+    height: 20rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.box-container .box a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid red;
+    color: red;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.box-container .box a:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/* start connect */
+
+.form {
+    width: 100%;
+    height: 600px;
+    background-color: #ececec;
+}
+
+.form .connect {
+    width: 60%;
+    height: 450px;
+    background-color: white;
+    margin-left: 20%;
+}
+
+.form .connect .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+}
+
+.form .connect textarea .input {
+    resize: none;
+    height: 250px;
+}
+
+.form .connect .input:focus {
+    outline: none;
+}
+
+.form .connect [type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.form .connect [type="submit"]:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/* end connect */
+
+
+/* start footer */
+
+.footer {
+    background-color: #191919;
+    padding: 70px 0 0;
+}
+
+.footer .container .box h3 {
+    color: white;
+    font-size: 50px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.footer .container .box .social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container .box .social li {
+    margin-right: 40px;
+    background-color: #313131;
+    color: #898989;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #898989;
+}
+
+.footer .container .box .social .facebook:hover {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+}
+
+.footer .container .box .social .twitter:hover {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+}
+
+.footer .container .box .social .youtube:hover {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
+
+.footer .container .box .text {
+    line-height: 2;
+    color: #898989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.footer .container .box .text:hover {
+    color: white;
+}
+
+
+/* end footer */
+
+
+/* start madia */
+
+@media (max-width:767px) {
+    .landing .main .text .contant h2 {
+        font-size: 50px;
+    }
+    .landing .main .text .contant p {
+        margin-bottom: 18px;
+    }
+    .footer {
+        padding-top: 40px;
+    }
+    header {
+        display: block;
+        height: 70px;
+        /* border-bottom: 0.5px solid gold; */
+    }
+    header .logo {
+        margin-left: 30px;
+        margin-top: 13px;
+    }
+    header .logo img {
+        display: none;
+    }
+    header .logo,
+    h1 {
+        display: inline-block;
+    }
+    header .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    header .logo h1 {
+        color: darkgray;
+    }
+    .landing .main .text {
+        /* overflow: hidden; */
+        position: relative;
+        width: auto;
+        transform: none;
+    }
+    .articles .box-container {
+        margin-left: 4%;
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+        margin-left: 3%;
+    }
+    .landing .main .image {
+        overflow: hidden;
+    }
+    .landing .main .image img {
+        width: -webkit-fill-available;
+    }
+    .footer .container .box .social {
+        justify-content: unset;
+    }
+    .footer .container .box .social li {
+        margin-right: 15px;
+    }
+    .form .connect {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .form {
+        height: 530px;
+    }
+    nav {
+        display: none;
+    }
+    #menu-bar-1 {
+        display: inline-block;
+        margin-left: 20px;
+        color: darkgray;
+    }
+    .phone-nav-1 {
+        display: block;
+        background-color: black;
+        border-top: 5px solid rgba(0, 0, 0, .1);
+        position: relative;
+        z-index: 10;
+        text-align: start;
+        border-top: 5px solid rgba(0, 0, 0, .1);
+        height: 380px;
+        transition: 0.5s;
+        transform: rotateX(90deg);
+        transform-origin: right top;
+    }
+    .phone-nav-1 a {
+        text-transform: capitalize;
+        margin: 10px;
+        margin-bottom: 30px;
+        padding: 10px;
+        padding-left: 10px;
+        margin-right: 50px;
+        margin-left: 50px;
+        color: goldenrod;
+        font-weight: bolder;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #daa52054;
+    }
+}
+
+
+/* end madia */

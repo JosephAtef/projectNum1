@@ -1,0 +1,361 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    header {
+        height: 60px;
+        background-color: aliceblue;
+        margin: -10px -12px;
+        margin-bottom: 0;
+    }
+    
+    .header-1 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #menu-bar {
+        font-size: 23px;
+        cursor: pointer;
+        color: #666;
+        border: 1px solid #666;
+        height: 33px;
+        border-radius: 8px;
+        padding: 5px 8px 0px;
+        display: none;
+    }
+    
+    .compnyName img {
+        margin-left: 7px;
+        margin-bottom: -5px;
+        width: 21px;
+        height: 23px;
+    }
+    
+    .compnyName {
+        margin-left: 30px;
+        text-transform: capitalize;
+        font-family: serif;
+    }
+    
+    .compnyName .t1,
+    .t2 {
+        font-weight: bolder;
+        font-size: 50px;
+        color: black;
+        text-shadow: 2px 1px 2px black;
+    }
+    
+    .compnyName .t1 {
+        text-transform: capitalize;
+        font-size: 50px;
+        margin-right: 5px;
+    }
+    
+    .compnyName .t2 {
+        font-size: 30px;
+    }
+    /* ################
+here starts the nav */
+    
+    .phone-nav {
+        display: none;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav .outer-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        height: 100%;
+        /* margin-right: 100px; */
+    }
+    
+    nav .outer-list .outer-list-item {
+        margin-right: 100px;
+        padding: 5px;
+    }
+    
+    nav .outer-list .outer-list-item .outer-list-item-link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    
+    nav .outer-list .not-list {
+        position: relative;
+    }
+    
+    nav .outer-list .not-list:hover ::before {
+        content: '';
+        background-color: darkviolet;
+        position: absolute;
+        top: 2px;
+        left: -8px;
+        margin-top: 10px;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+    }
+    
+    nav .outer-list .outer-list-item i {
+        position: relative;
+        top: 1.2px;
+        left: 2px;
+        font-size: 15px;
+    }
+    /* #############
+here is the inner lists of nav*/
+    
+    nav .outer-list .outer-list-item .inner-list {
+        position: relative;
+        margin-left: -30px;
+        margin-top: 10px;
+        width: 160%;
+        background-color: #eee;
+        color: black;
+        transition: 0.5s;
+        transform: rotateX(90deg);
+        transform-origin: right top;
+    }
+    
+    nav .outer-list .outer-list-item:hover .inner-list {
+        transform: rotateX(0deg);
+        z-index: 10;
+    }
+    
+    nav .outer-list .outer-list-item .inner-list::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: violet;
+    }
+    /* the inner list items */
+    
+    nav .outer-list .outer-list-item .inner-list:first-child {
+        padding-top: 2.5px;
+    }
+    
+    nav .outer-list .outer-list-item .inner-list .inner-list-item {
+        border-bottom: 0.6px solid #785e5e30;
+        margin-left: 15%;
+        padding: 15px;
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+    }
+    
+    nav .outer-list .outer-list-item .inner-list .inner-list-item:hover {
+        color: red;
+    }
+    /* point item to appear before the link in the list */
+    
+    nav .outer-list .outer-list-item .inner-list .inner-list-item span {
+        display: none;
+        margin-right: 5px;
+        margin-bottom: 3px;
+        background-color: darkviolet;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+    }
+    
+    nav .outer-list .outer-list-item .inner-list .inner-list-item:hover span {
+        display: inline-block;
+    }
+    /*
+###################
+##################
+#################
+################
+###############
+##############
+#############
+############
+###########
+##########
+#########
+########
+#######
+######
+#####
+####
+###
+##
+#
+*/
+    
+    @media(max-width:1000px) {
+        header {
+            height: 58px;
+            background-color: aliceblue;
+        }
+        .header-1 {
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+        #menu-bar {
+            display: initial;
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        .compnyName {
+            display: inline-block;
+        }
+        .computer-nav {
+            display: none;
+        }
+        .phone-nav {
+            display: block;
+            background-color: dimgray;
+            border-top: 5px solid rgba(0, 0, 0, .1);
+            position: relative;
+            z-index: 15;
+            height: 290px;
+            text-align: start;
+            border-top: 5px solid rgba(0, 0, 0, .1);
+            /* height: auto; */
+            transition: 0.5s;
+            transform: rotateX(90deg);
+            transform-origin: right top;
+        }
+        .phone-nav a {
+            text-transform: capitalize;
+            margin: 10px;
+            margin-bottom: 30px;
+            padding: 10px;
+            padding-left: 10px;
+            margin-right: 50px;
+            margin-left: 50px;
+            color: black;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgb(0 0 0 / 19%);
+        }
+        .phone-nav a i {
+            padding-right: 10px;
+        }
+        .phone-nav .contact-insider-link {
+            display: block;
+            background-color: dimgray;
+            transition: 0.5s;
+            transform: rotateX(90deg);
+            margin-left: 0;
+            font-size: 15px;
+        }
+        .phone-nav .contact-insider-link a {
+            margin-top: 1px;
+            padding-left: 30px;
+            margin-left: 45%;
+            width: 50%;
+        }
+        .phone-nav #contactMenu {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+        .phone-nav #contactMenu .listIcon {
+            padding-left: 25px;
+        }
+    }
+    
+    @media (max-width:767px) {
+        header {
+            height: 50px;
+            background-color: aliceblue;
+        }
+        .header-1 {
+            display: block;
+            text-align: center;
+            position: relative;
+        }
+        #menu-bar {
+            background-color: lavender;
+            display: initial;
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 28px;
+        }
+        .compnyName {
+            display: inline-block;
+            margin-top: 5px;
+            margin-left: 0;
+        }
+        .compnyName .t1 {
+            font-size: 35px;
+            display: inline-block;
+        }
+        .compnyName .t2 {
+            font-size: 22px;
+            display: inline-block;
+        }
+        .computer-nav {
+            display: none;
+        }
+        .phone-nav {
+            display: block;
+            background-color: dimgray;
+            border-top: 5px solid rgba(0, 0, 0, .1);
+            position: relative;
+            z-index: 15;
+            height: 290px;
+            text-align: start;
+            border-top: 5px solid rgba(0, 0, 0, .1);
+            /* height: auto; */
+            transition: 0.5s;
+            transform: rotateX(90deg);
+            transform-origin: right top;
+        }
+        .phone-nav a {
+            text-transform: capitalize;
+            margin: 10px;
+            margin-bottom: 30px;
+            padding: 10px;
+            padding-left: 10px;
+            margin-right: 50px;
+            margin-left: 50px;
+            color: black;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgb(0 0 0 / 19%);
+        }
+        .phone-nav a i {
+            padding-right: 10px;
+        }
+        .phone-nav .contact-insider-link {
+            display: block;
+            background-color: dimgray;
+            transition: 0.5s;
+            transform: rotateX(90deg);
+            margin-left: 0;
+            font-size: 15px;
+        }
+        .phone-nav .contact-insider-link a {
+            margin-top: 1px;
+            padding-left: 30px;
+            margin-left: 45%;
+            width: 50%;
+        }
+        .phone-nav #contactMenu {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+        .phone-nav #contactMenu .listIcon {
+            padding-left: 25px;
+        }
+    }

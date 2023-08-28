@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact_us {
+    overflow: hidden;
+    height: auto;
+    margin: 0 -12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/images/contactUsPhoto.png');
+}
+
+.side-text {
+    text-align: center;
+    font-size: 40px;
+    color: darkgray;
+    margin: 20px;
+    position: relative;
+}
+
+.main-text {
+    text-align: center;
+    font-size: 40px;
+    color: ghostwhite;
+    margin: 20px;
+    position: relative;
+}
+
+.main-text::before {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    position: absolute;
+    background-color: darkgoldenrod;
+    left: 35%;
+    top: 28%;
+}
+
+.main-text::after {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    position: absolute;
+    background-color: darkgoldenrod;
+    right: 35%;
+    top: 28%;
+}
+
+.links-container {
+    margin: 20px 3%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12%;
+}
+
+.links-container .link {
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.links-container .link:hover {
+    background-color: black;
+}
+
+.links-container .link a {
+    color: #ffffffde;
+    font-weight: bold;
+}
+
+.links-container .link1 i {
+    color: green;
+}
+
+.links-container .link2 i {
+    color: blue;
+}
+
+.links-container .link4 i {
+    color: red
+}
+
+.links-container .link4 i:hover,
+.links-container .link2 i:hover,
+.links-container .link1 i:hover {
+    color: black;
+}
+
+@media(max-width:767px) {
+    .contact_us {
+        height: 395px;
+    }
+    .main-text::before {
+        left: 5%;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+    }
+    .main-text {
+        font-size: 30px;
+    }
+    .main-text::after {
+        right: 5%;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+    }
+    .links-container .link {
+        font-size: 22px;
+    }
+    .side-text {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+}
